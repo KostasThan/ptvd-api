@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/localdb
+    username: root
+    password: K59785978@m
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  liquibase:
+    enabled: false
+    drop-first: false
+    change-log: src/main/java/liquibase/changelog.xml
+    default-schema: public
+
+server:
+  servlet:
+    context-path: /mixas
+
+

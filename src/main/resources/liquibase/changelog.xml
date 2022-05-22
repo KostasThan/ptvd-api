@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog logicalFilePath="li"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <include relativeToChangelogFile="true" file="changelogs/1.0.0000-Create-Countries.sql"/>
+    <include relativeToChangelogFile="true" file="changelogs/1.0.0001-Create-Indicators.sql"/>
+    <include relativeToChangelogFile="true" file="changelogs/1.0.0002-Create-CountryIndicator.sql"/>
+    <include relativeToChangelogFile="true" file="changelogs/1.0.0003-Create-Metric.sql"/>
+<!--    <include relativeToChangelogFile="true" file="changelogs/2.0.0001-demo-data.sql"/>-->
+    <include relativeToChangelogFile="true" file="changelogs/1.0.0004-Alter-Indicator-Column-Name.sql"/>
+<!--    <include relativeToChangelogFile="true" file="changelogs/init-data/LoadInitData-Indicators.sql"/>-->
+</databaseChangeLog>

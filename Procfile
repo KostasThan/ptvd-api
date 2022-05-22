@@ -1,0 +1,1 @@
+web: java -jar -Dserver.port=$PORT target/ptvd-api-1.0-SNAPSHOT.jar

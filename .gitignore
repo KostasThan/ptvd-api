@@ -4,3 +4,4 @@ target/**
 .settings/
 target
 .idea
+ui/node_modules

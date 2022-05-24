@@ -34,6 +34,7 @@ If you want to load the demo data as well, move to file scripts&data
 8. Connect to the database we set up at step 1 and run SHOW VARIABLES LIKE 'secure_file_priv';
 9. The response directory is where you should copy the files from step 7
 10. Either uncomment from changelog the line that runs the LoadDataInit.sql and run liquibase again, or copy the contents of that file and directly run them in the DB IDE. 
+11. Finally there is a change that cors blocks the domain even though it is from the same, since both apps run in localhost. Use an extention to go around CORS like Moesif CORS plugin
 
 NOTE: CHANGE THE FILEPATH FROM THE FILE LoadDataInit.sql 
 
@@ -59,5 +60,6 @@ https://drive.google.com/file/d/1PqZjpBqxzZeXCV5faDF6jJfvJb9u9vqh/view?usp=shari
 - [ ] Although the app is not very big, we should have tests that cover the whole functionality of the application, so we can maintain the code easier and be user that we provide something that works
  
 - [ ] Add error handlingh to respond with 4xx statuses instead of 5xx
+- [ ] Configure back-end to allow same domain requests without cors interupting them
 
 

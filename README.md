@@ -52,7 +52,7 @@ To achieve those tasks we did the following
 * Added **SWAGGER**, so we could document the API and have a running HTTP CLient to test and experiment with the API we are providing
 
 
-A link to a video explaining the app, and the process of developing it in greek.
+A link to a video explaining the app, and the process of developing it in greek and apparently in low quality.
 https://drive.google.com/file/d/1PqZjpBqxzZeXCV5faDF6jJfvJb9u9vqh/view?usp=sharing
 
 #### TODOS

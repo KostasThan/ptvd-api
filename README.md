@@ -6,7 +6,8 @@ In this project we reliazed a simple data visiualization app. Data was taken fro
 In your local machine, one must have installed
  * maven
  * java15
-
+ * node 16.14 or greater
+ * yarn 1.22.18 or greater
  
  
  

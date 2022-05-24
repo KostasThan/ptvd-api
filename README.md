@@ -46,7 +46,7 @@ In addition to that clean code and architectures were required for both the Back
 
 To achieve those tasks we did the following
 
-* Created and tested different db schemas and configurations so we can end up with a more robust and faster to response database
+* Created and tested different db schemas and configurations so we can end up with a more robust and faster to respond database
 * User python scripts to transfrom the initial data to a specific format so the can be loaded with liquibase thus if the db was corrupted within a very short amount of it would be up and running again
 * Used java conventions and patterns to stucture the code so it can be easily maintenable
 * Added **SWAGGER**, so we could document the API and have a running HTTP CLient to test and experiment with the API we are providing

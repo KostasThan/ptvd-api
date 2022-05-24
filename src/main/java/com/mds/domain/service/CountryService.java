@@ -17,7 +17,7 @@ public class CountryService {
     }
 
     public Country findCountryByName(String id){
-        return countryDBAdapter.findCountryByName(id);
+        return countryDBAdapter.hasCountryNameLike(id);
     }
 
     public List<Country> findByCriteria(CountrySearchCriteria criteria) {

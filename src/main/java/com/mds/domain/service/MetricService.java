@@ -1,13 +1,15 @@
 package com.mds.domain.service;
 
+import com.mds.dao.dbadapters.CountryDBAdapter;
 import com.mds.dao.dbadapters.MetricDBAdapter;
 import com.mds.domain.model.Metric;
 import com.mds.domain.model.MetricSearchCriteria;
 import liquibase.repackaged.org.apache.commons.lang3.tuple.MutablePair;
-import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -15,11 +17,16 @@ public class MetricService {
 
     private final MetricDBAdapter metricDBAdapter;
 
-    public MetricService(MetricDBAdapter metricDBAdapter) {
+    private final CountryDBAdapter countryDBAdapter;
+
+    public MetricService(MetricDBAdapter metricDBAdapter, CountryDBAdapter countryDBAdapter) {
         this.metricDBAdapter = metricDBAdapter;
+        this.countryDBAdapter = countryDBAdapter;
     }
 
     public List<Metric> findByCriteria(MetricSearchCriteria criteria) {
+        validateCountryExists(criteria);
+
         List<Metric> metrics = metricDBAdapter.findByCriteria(criteria);
 
         if (shouldAggregateTheResults(criteria, metrics)) {
@@ -33,6 +40,14 @@ public class MetricService {
 
         }
         return metrics;
+    }
+
+    private void validateCountryExists(MetricSearchCriteria criteria) {
+        try{
+            countryDBAdapter.hasCountryNameLike(criteria.getCountryName());
+        }catch(RuntimeException e){
+            throw new RuntimeException("Country could not be found");
+        }
     }
 
     private List<Metric> aggregateMetrics(List<Metric> metrics, Integer fromYear, Integer aggregateByYears) {

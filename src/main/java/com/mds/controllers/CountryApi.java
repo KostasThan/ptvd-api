@@ -8,7 +8,6 @@ import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -25,12 +24,5 @@ public interface CountryApi {
             @RequestParam(required = false, value = "name") String name
     );
 
-    @Operation(summary = "Returns a Country by name")
-    @GetMapping(value = BASE_URL + "/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
-    ResponseEntity<Country> findByName(
-
-            @Parameter(in = ParameterIn.PATH, description = "The name of the Country")
-            @PathVariable(value = "name") String name
-    );
 
 }

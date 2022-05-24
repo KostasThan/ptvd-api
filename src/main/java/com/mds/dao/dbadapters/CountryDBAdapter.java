@@ -2,7 +2,6 @@ package com.mds.dao.dbadapters;
 
 import com.mds.dao.entities.CountryEntity;
 import com.mds.dao.entities.CountryEntity_;
-import com.mds.dao.entities.CountryIndicatorEntity;
 import com.mds.dao.repositories.CountryRepository;
 import com.mds.domain.model.Country;
 import com.mds.domain.model.CountrySearchCriteria;
@@ -28,30 +27,27 @@ public class CountryDBAdapter {
         this.countryMapper = countryMapper;
     }
 
-    public List<Country> findAllCountries(){
-        List<CountryEntity> countryEntities= countryRepository.findAll(null);
+    public Country hasCountryNameLike(String countryName){
+        Specification<CountryEntity> specification = where(hasCountryNameLikeSpecification(countryName));
 
-        return countryMapper.entityToModel(countryEntities);
-    }
-    public Country findCountryByName(String id){
-        Optional<CountryEntity> countryOptional = countryRepository.findById(id);
+        List<CountryEntity> countryEntities = countryRepository.findAll(specification);
 
-        if(countryOptional.isPresent()){
-            return countryMapper.entityToModel(countryOptional.get());
+        if(countryEntities.isEmpty()){
+            throw new RuntimeException(countryName);
         }
 
-        throw new RuntimeException(id);
+        return countryMapper.entityToModel(countryEntities.get(0));
     }
 
     public List<Country> findByCriteria(CountrySearchCriteria criteria) {
-        Specification<CountryEntity> specification = where(hasCountryNameLike(criteria.getName()));
+        Specification<CountryEntity> specification = where(hasCountryNameLikeSpecification(criteria.getName()));
 
         List<CountryEntity> countryEntities = countryRepository.findAll(specification);
 
         return countryMapper.entityToModel(countryEntities);
     }
 
-    private Specification<CountryEntity> hasCountryNameLike(String name) {
+    private Specification<CountryEntity> hasCountryNameLikeSpecification(String name) {
         return SpecificationUtils.likeIgnoreCase(name, CountryEntity_.NAME);
     }
 }

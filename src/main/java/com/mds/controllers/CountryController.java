@@ -23,9 +23,4 @@ public class CountryController implements CountryApi{
         return ResponseEntity.ok(countryService.findByCriteria(criteria));
     }
 
-    @Override
-    public ResponseEntity<Country> findByName(String name) {
-        Country county = countryService.findCountryByName(name);
-        return ResponseEntity.ok(county);
-    }
 }

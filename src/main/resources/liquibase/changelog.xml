@@ -7,9 +7,7 @@
 
     <include relativeToChangelogFile="true" file="changelogs/1.0.0000-Create-Countries.sql"/>
     <include relativeToChangelogFile="true" file="changelogs/1.0.0001-Create-Indicators.sql"/>
-    <include relativeToChangelogFile="true" file="changelogs/1.0.0002-Create-CountryIndicator.sql"/>
-    <include relativeToChangelogFile="true" file="changelogs/1.0.0003-Create-Metric.sql"/>
-<!--    <include relativeToChangelogFile="true" file="changelogs/2.0.0001-demo-data.sql"/>-->
-    <include relativeToChangelogFile="true" file="changelogs/1.0.0004-Alter-Indicator-Column-Name.sql"/>
-<!--    <include relativeToChangelogFile="true" file="changelogs/init-data/LoadInitData-Indicators.sql"/>-->
+    <include relativeToChangelogFile="true" file="changelogs/1.0.0002-Create-Metric.sql"/>
+<!--    <include relativeToChangelogFile="true" file="changelogs/init-data/LoadInitData-Data.sql"/>-->
+
 </databaseChangeLog>

@@ -3,9 +3,7 @@ spring:
     url: jdbc:mysql://localhost:3306/localdb
     username: root
     password: K59785978@m
-#    url: postgres://mgymhzzgfxedmz:49e24348e7628af871eabe02843240ca33972778e7f8de5f2f7e737ec527d756@ec2-63-35-156-160.eu-west-1.compute.amazonaws.com:5432/d7b8tqo07jsfu0
-#    username: mgymhzzgfxedmz
-#    password: 49e24348e7628af871eabe02843240ca33972778e7f8de5f2f7e737ec527d756
+
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
@@ -22,7 +20,7 @@ spring:
     enabled: false
     drop-first: false
     change-log: liquibase/changelog.xml
-#    default-schema: public
+
 
 server:
   servlet:

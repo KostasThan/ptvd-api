@@ -1,26 +1,23 @@
 package com.mds.dao.entities;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import org.hibernate.Hibernate;
-import org.springframework.context.annotation.Lazy;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
 
-@Entity
-@Table(name = "metric_greece")
+
 @Setter
+@Getter
 @RequiredArgsConstructor
 public class MetricEntity implements Serializable {
 
     @Id
     private String id;
-
-    @OneToOne(cascade = CascadeType.DETACH, fetch = FetchType.LAZY)
-    @JoinColumn(name = "country_indicator_id", referencedColumnName = CountryIndicatorEntity_.ID)
-    private CountryIndicatorEntity countryIndicatorEntity;
 
     @Column
     private int year;

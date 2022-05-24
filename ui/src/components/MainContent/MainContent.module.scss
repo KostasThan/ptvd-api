@@ -1,0 +1,39 @@
+.mixas {
+  background-color: #1d3221;
+  height: 50px;
+}
+
+.about {
+  border-radius: 50%;
+  border: 1px solid #1d3221;
+  color: wheat;
+  background-color: #1d3221;
+}
+
+.logo {
+  margin-left: 5px;
+  margin-top: 2px;
+  color: wheat;
+  user-select: none;
+}
+
+.mainContentContainer {
+  display: flex;
+  position: relative;
+  overflow-y: auto;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+
+.userOptions {
+  box-shadow: -2px -2px 6px 1px;
+  position: relative;
+}
+
+.userSelectionTitle {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+

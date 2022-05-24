@@ -52,7 +52,7 @@ To achieve those tasks we did the following
 
 
 #### TODOS
- * Although the app is not very big, we should have tests that cover the whole functionality of the application, so we can maintain the code easier and be user that we provide something that works
- * Add error handlingh to respond with 4xx statuses instead of 5xx
+ [] Although the app is not very big, we should have tests that cover the whole functionality of the application, so we can maintain the code easier and be user that we provide something that works
+ [] Add error handlingh to respond with 4xx statuses instead of 5xx
 
 

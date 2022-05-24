@@ -1,7 +1,7 @@
 # This is a sample Python script.
 import os
 import uuid
-RELATIVE_PATH = '.\\data'
+RELATIVE_PATH = '.\\initialdata'
 
 
 def is_float(element: str) -> bool:
@@ -100,7 +100,6 @@ if __name__ == '__main__':
     metadata = []
     country_metrics = []
     for f in files:
-        # print(f)
         if f.startswith('Metadata'):
             metadata.append(related_to_data_path + f)
         else:

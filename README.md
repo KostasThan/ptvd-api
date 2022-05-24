@@ -39,7 +39,7 @@ NOTE: CHANGE THE FILEPATH FROM THE FILE LoadDataInit.sql
 
 
 ## ABOUT THIS PROJECT
-This project was part of MYY030 course of UOI under the proffessor *Panagiotis Vasialeiadis* who provided the necessary materiel to implement this project.
+This project was part of MYE030 course of UOI under the proffessor *Panagiotis Vasialeiadis* who provided the necessary materiel to implement this project.
 
 The main goal was to set up a database, with proper tables and configurations and have a straight forward way to restore data if they were corrupted/lost.
 In addition to that clean code and architectures were required for both the Back-End and Front-End part and a clear documented API.
